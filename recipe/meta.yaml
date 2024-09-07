@@ -22,6 +22,8 @@ requirements:
   host:
     - pip
     - python
+    - setuptools >=40.8.0
+    - wheel
   run:
     - backports.zoneinfo  # [py>=36 and py<39]
     - python
