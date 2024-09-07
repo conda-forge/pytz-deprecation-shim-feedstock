@@ -11,7 +11,7 @@ source:
   sha256: af097bae1b616dde5c5744441e2ddc69e74dfdcb0c263129610d85b87445a59d
 
 build:
-  number: 4
+  number: 5
   skip: true   # [py<36]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,6 +22,8 @@ requirements:
   host:
     - pip
     - python
+    - setuptools >=40.8.0
+    - wheel
   run:
     - backports.zoneinfo  # [py>=36 and py<39]
     - python
