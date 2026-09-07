@@ -13,16 +13,16 @@ source:
   sha256: af097bae1b616dde5c5744441e2ddc69e74dfdcb0c263129610d85b87445a59d
 
 build:
-  number: 6
+  number: 7
   skip: match(python, "<3.6")
   script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: 
-      - python
-      - cross-python_${{ target_platform }}
+      then:
+        - python
+        - cross-python_${{ target_platform }}
   host:
     - pip
     - python
